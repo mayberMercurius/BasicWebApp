@@ -30,4 +30,36 @@ class QueryProcessorTest {
 		}
 	}
 
+	@Test
+	void testName() {
+		String actual = queryProcessor.process("name");
+		if (!actual.contains("penguin")) {
+			fail("Your do not know who I am");
+		}
+	}
+
+	@Test
+	void testAge() {
+		String actual = queryProcessor.process("age");
+		if (!actual.contains("2")) {
+			fail("Your do not know how old I am");
+		}
+	}
+
+	@Test
+	void testCharacteristic() {
+		String actual = queryProcessor.process("characteristic");
+		if (!actual.contains("stupid")) {
+			fail("Your do not know me");
+		}
+	}
+
+	@Test
+	void testFriend() {
+		String actual = queryProcessor.process("friend");
+		if (!actual.contains("pgdp")) {
+			fail("Your do not know my friend");
+		}
+	}
+
 }
